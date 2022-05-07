@@ -11,20 +11,22 @@ datasource db {
 }
 
 model Item {
-  id   Int    @id @default(autoincrement())
-  item String
+  id          Int    @id @default(autoincrement())
+  item        String @db.VarChar(64)
+  description String @db.VarChar(255)
 
 
 
-  Order Order[]
+  Order         Order[]
+  Customization Customization[]
 }
 
 model Customer {
   id         Int     @id @default(autoincrement())
   firstName  String  @db.VarChar(64)
   lastName   String  @db.VarChar(64)
-  address    String
-  city       String
+  address    String  @db.VarChar(255)
+  city       String  @db.VarChar(255)
   postalCode Int
   orders     Order[]
 
@@ -32,9 +34,19 @@ model Customer {
 }
 
 model Order {
-  id         Int      @id @default(autoincrement())
-  customer   Customer @relation(fields: [customerId], references: [id])
-  customerId Int
-  items      Item     @relation(fields: [itemId], references: [id])
-  itemId     Int
+  id          Int      @id @default(autoincrement())
+  customer    Customer @relation(fields: [customerId], references: [id])
+  customerId  Int
+  items       Item     @relation(fields: [itemId], references: [id])
+  itemId      Int
+  timeOrdered DateTime @default(now())
+}
+
+model Customization {
+  id     Int  @id @default(autoincrement())
+  item   Item @relation(fields: [itemId], references: [id])
+  itemId Int
+  color String?
+  shape String?
+  extraInfo String?
 }
