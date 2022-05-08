@@ -11,12 +11,11 @@ datasource db {
 }
 
 model Item {
-  id          Int    @id @default(autoincrement())
-  item        String @db.VarChar(64)
-  description String @db.VarChar(255)
-
-
-
+  id            Int             @id @default(autoincrement())
+  item          String          @db.VarChar(64)
+  description   String          @db.VarChar(255)
+  price         Int
+  image         String
   Order         Order[]
   Customization Customization[]
 }
@@ -39,14 +38,15 @@ model Order {
   customerId  Int
   items       Item     @relation(fields: [itemId], references: [id])
   itemId      Int
+  quantity    Int
   timeOrdered DateTime @default(now())
 }
 
 model Customization {
-  id     Int  @id @default(autoincrement())
-  item   Item @relation(fields: [itemId], references: [id])
-  itemId Int
-  color String?
-  shape String?
-  extraInfo String?
+  id         Int     @id @default(autoincrement())
+  item       Item    @relation(fields: [itemId], references: [id])
+  itemId     Int
+  color      String?
+  shape      String?
+  decoration String?
 }
