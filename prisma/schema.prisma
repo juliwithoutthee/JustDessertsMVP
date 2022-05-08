@@ -12,9 +12,9 @@ datasource db {
 
 model Item {
   id            Int             @id @default(autoincrement())
-  item          String          @db.VarChar(64)
+  itemName      String          @db.VarChar(64)
   description   String          @db.VarChar(255)
-  price         Int
+  price         Float
   image         String
   Order         Order[]
   Customization Customization[]
@@ -39,6 +39,7 @@ model Order {
   items       Item     @relation(fields: [itemId], references: [id])
   itemId      Int
   quantity    Int
+  totalCost   Float
   timeOrdered DateTime @default(now())
 }
 
