@@ -1,0 +1,3 @@
+[submodule "MVPfrontend"]
+	path = MVPfrontend
+	url = https://github.com/juliwithoutthee/MVPfrontend.git
