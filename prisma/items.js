@@ -1,4 +1,4 @@
-const items = [
+export const items = [
     {
         id: 1,
         itemName: "Cookies",
@@ -34,4 +34,4 @@ const items = [
         price: 35, 
 
     }, 
-]
+];
