@@ -13,12 +13,12 @@ Seeding:
 npx prisma db seed
 
 
-Checking your tables:
+Checking your tables in your psql terminal:
 SELECT * FROM "Item";
 
 
 In your env. file: 
-DATABASE_URL= postgresql://postgres:NULL@localhost:/justdesserts
+DATABASE_URL= postgresql://postgres:NULL@localhost:5432/justdesserts
 DB_NAME=justdesserts
 DB_USER=
 DB_PASSWORD=
