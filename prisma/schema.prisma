@@ -15,7 +15,7 @@ model Item {
   itemName      String          @db.VarChar(64)
   description   String          @db.VarChar(255)
   price         Float
-  image         String
+  //image         String?
   Order         Order[]
   Customization Customization[]
 }
