@@ -1,2 +1,2 @@
-release: npx prisma db seed
+release: npx prisma migrate dev
 web: npm run start
