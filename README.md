@@ -1,14 +1,14 @@
-### Welcome to the backend of Just Desserts! 
+# Welcome to the backend of Just Desserts! 
 
 Just Desserts is an app that allows you to order desserts when you're stressed! 
 
-# To start frontend server in a separate terminal: 
+### To start frontend server in a separate terminal: 
 
 `cd MVPfrontend/solomvpfrontend`
 `npm run build`
 `npm run dev`
 
-# Creating your database 
+### Creating your database 
 
 To create a database: 
 In a psql terminal, run the following code: 
@@ -17,21 +17,21 @@ In a psql terminal, run the following code:
 
 `CREATE DATABASE justdesserts; `
 
-# Migrations:
+### Migrations:
 
 `npx prisma migrate dev` || `npm run migrate`
 
-# Seeding:
+### Seeding:
 
 `npx prisma db seed` || `npm run seed`
 
 
-# Checking your tables in your psql terminal:
+### Checking your tables in your psql terminal:
 
 `SELECT * FROM "Item";`
 
 
-# In your env. file: 
+### In your env. file: 
 
 `DATABASE_URL= postgresql://postgres:NULL@localhost:5432/justdesserts`
 `DB_NAME=justdesserts`
