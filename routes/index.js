@@ -14,7 +14,7 @@ router.get('/items', async (req, res) => {
   res.json(items);
 })
 router.post('/customers', async (req, res) => {
-  const result = await prisma.createCustomer({
+  const result = await prisma.customer.create({
   ...req.body,
 })
 res.json(result)
@@ -26,7 +26,7 @@ router.get('/orders', async (req, res) =>{
 
 //Create new order
 router.post('/order', async (req, res) => {
-  const result = await prisma.createOrder({
+  const result = await prisma.order.create({
     ...req.body,
   })
   res.json(result)
