@@ -13,5 +13,22 @@ router.get('/items', async (req, res) => {
   console.log(items);
   res.json(items);
 })
+router.post('/customers', async (req, res) => {
+  const result = await prisma.createCustomer({
+  ...req.body,
+})
+res.json(result)
+});
 
+router.get('/orders', async (req, res) =>{
+  //get order info from db
+});
+
+//Create new order
+router.post('/order', async (req, res) => {
+  const result = await prisma.createOrder({
+    ...req.body,
+  })
+  res.json(result)
+});
 module.exports = router;
