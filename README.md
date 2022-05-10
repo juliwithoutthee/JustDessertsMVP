@@ -19,11 +19,11 @@ In a psql terminal, run the following code:
 
 ### Migrations:
 
-``` npx prisma migrate dev` || `npm run migrate ```
+``` npx prisma migrate dev || npm run migrate ```
 
 ### Seeding:
 
-```npx prisma db seed` || `npm run seed```
+```npx prisma db seed || npm run seed```
 
 
 ### Checking your tables in your psql terminal:
