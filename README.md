@@ -1,4 +1,4 @@
-# Welcome to the backend of Just Desserts! 
+# Welcome to Just Desserts! 
 
 Just Desserts is an app that allows you to order desserts when you're stressed! 
 
