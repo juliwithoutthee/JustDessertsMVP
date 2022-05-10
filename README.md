@@ -19,25 +19,31 @@ In a psql terminal, run the following code:
 
 ### Migrations:
 
-`npx prisma migrate dev` || `npm run migrate`
+``` npx prisma migrate dev` || `npm run migrate ```
 
 ### Seeding:
 
-`npx prisma db seed` || `npm run seed`
+```npx prisma db seed` || `npm run seed```
 
 
 ### Checking your tables in your psql terminal:
 
-`SELECT * FROM "Item";`
+```SELECT * FROM "Item";```
 
 
 ### In your env. file: 
 
-`DATABASE_URL= postgresql://postgres:NULL@localhost:5432/justdesserts`
-`DB_NAME=justdesserts`
-`DB_USER=`
-`DB_PASSWORD=`
+```sh
+DATABASE_URL= postgresql://postgres:NULL@localhost:5432/justdesserts
+DB_NAME=justdesserts
+DB_USER=
+DB_PASSWORD= 
+```
 
 
 ### Backlog 
 
+Fix deployment
+Add more HTTP requests
+Fix frontend
+Add Stripe API
