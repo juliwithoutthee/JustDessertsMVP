@@ -27,7 +27,7 @@ router.get('/orders', async (req, res) => {
   res.json(orders);
 });
 
-//Create new order
+//TODO: Create new order 
 router.post('/order', async (req, res) => {
   const { customer, items, quantity, totalCost, timeOrdered } = req.body;
   const result = await prisma.order.create({
